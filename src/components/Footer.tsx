@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-hero text-white py-12">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
             <p className="text-white/80 text-sm">
               Senior Cloud Architect helping businesses unlock the full potential of cloud technology 
-              with 4+ years of experience and 15+ certifications.
+              with 4+ years of experience and 20+ certifications.
             </p>
             <div className="flex flex-wrap gap-2">
               <Badge variant="outline" className="bg-white/10 text-white border-white/30">
@@ -32,45 +32,21 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-colors flex items-center gap-1">
-                  About Me
-                </a>
-              </li>
-              <li>
-                <a href="#skills" className="text-white/80 hover:text-white transition-colors flex items-center gap-1">
-                  Technical Skills
-                </a>
-              </li>
-              <li>
-                <a href="#experience" className="text-white/80 hover:text-white transition-colors flex items-center gap-1">
-                  Experience
-                </a>
-              </li>
-              <li>
-                <a href="#certifications" className="text-white/80 hover:text-white transition-colors flex items-center gap-1">
-                  Certifications
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-white/80 hover:text-white transition-colors flex items-center gap-1">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-
           {/* Professional Info */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Professional</h3>
             <div className="space-y-2 text-sm">
               <div className="text-white/80">
                 <div className="font-medium text-white">Current Role</div>
-                Senior Cloud Architect at Celebal Technologies
+                Senior Cloud Architect at 
+                <a 
+                  href="https://celebaltech.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary-glow hover:text-primary ml-1"
+                >
+                  Celebal Technologies
+                </a>
               </div>
               <div className="text-white/80">
                 <div className="font-medium text-white">Location</div>
@@ -94,7 +70,9 @@ const Footer = () => {
           
           <div className="flex items-center gap-4 text-sm">
             <a 
-              href="https://linkedin.com/in/sachinjha" 
+              href="https://www.linkedin.com/in/sachin-kumar-jha-746005161/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white/80 hover:text-white transition-colors flex items-center gap-1"
             >
               LinkedIn Profile
@@ -102,7 +80,7 @@ const Footer = () => {
             </a>
             <span className="text-white/40">•</span>
             <div className="text-white/80 flex items-center gap-1">
-              Built with <Heart className="w-3 h-3 text-red-400" /> for the cloud community
+              Built with <Heart className="w-3 h-3 text-red-400" /> by Sachin
             </div>
           </div>
         </div>

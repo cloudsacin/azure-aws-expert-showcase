@@ -86,7 +86,7 @@ const Certifications = () => {
   ];
 
   const certificationStats = {
-    total: 15,
+    total: 20,
     azure: 7,
     aws: 2,
     gcp: 1,
@@ -101,7 +101,7 @@ const Certifications = () => {
             Certifications & Credentials
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Industry-recognized certifications spanning all major cloud platforms, 
+            20+ industry-recognized certifications spanning all major cloud platforms, 
             demonstrating deep expertise and commitment to continuous learning.
           </p>
         </div>
@@ -177,9 +177,14 @@ const Certifications = () => {
                       <span className="text-foreground">{cert.expires}</span>
                     </div>
                   </div>
-                  <Button variant="outline" size="sm" className="w-full mt-4">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full mt-4"
+                    onClick={() => window.open('https://www.linkedin.com/in/sachin-kumar-jha-746005161/', '_blank')}
+                  >
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    View Credential
+                    View on LinkedIn Profile
                   </Button>
                 </CardContent>
               </Card>

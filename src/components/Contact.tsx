@@ -27,17 +27,9 @@ const Contact = () => {
     {
       icon: <Linkedin className="w-6 h-6" />,
       title: "LinkedIn",
-      value: "linkedin.com/in/sachinjha",
+      value: "linkedin.com/in/sachin-kumar-jha-746005161",
       description: "Professional networking and updates",
       action: "Connect on LinkedIn",
-      primary: false
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Schedule Call",
-      value: "Book a consultation",
-      description: "30-min cloud architecture consultation",
-      action: "Schedule Meeting",
       primary: false
     }
   ];
@@ -53,9 +45,7 @@ const Contact = () => {
     "Cloud Migration Strategy",
     "Architecture Review",
     "Cost Optimization",
-    "Security Assessment",
-    "Training & Consultation",
-    "Emergency Support"
+    "Security Assessment"
   ];
 
   return (
@@ -122,6 +112,13 @@ const Contact = () => {
                       <Button 
                         variant={method.primary ? "default" : "outline"}
                         className={method.primary ? "shadow-elegant hover:shadow-glow" : ""}
+                        onClick={() => {
+                          if (method.title === "Email") {
+                            window.location.href = 'mailto:sachin.jha@celebaltech.com';
+                          } else if (method.title === "LinkedIn") {
+                            window.open('https://www.linkedin.com/in/sachin-kumar-jha-746005161/', '_blank');
+                          }
+                        }}
                       >
                         {method.action}
                         <ExternalLink className="w-4 h-4 ml-2" />
@@ -153,7 +150,16 @@ const Contact = () => {
                     <Briefcase className="w-5 h-5 text-muted-foreground" />
                     <div>
                       <div className="font-medium text-foreground">Company</div>
-                      <div className="text-sm text-muted-foreground">Celebal Technologies</div>
+                      <div className="text-sm text-muted-foreground">
+                        <a 
+                          href="https://celebaltech.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-primary hover:text-primary/80 transition-colors"
+                        >
+                          Celebal Technologies
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -194,7 +200,7 @@ const Contact = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-muted-foreground">Certifications</span>
-                    <span className="font-semibold text-foreground">15+ Active</span>
+                    <span className="font-semibold text-foreground">20+ Active</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-muted-foreground">Cloud Platforms</span>
@@ -208,19 +214,6 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* CTA Card */}
-            <Card className="shadow-card bg-gradient-primary text-primary-foreground animate-fade-in" style={{animationDelay: '0.5s'}}>
-              <CardContent className="pt-6 text-center">
-                <Calendar className="w-8 h-8 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">Free Consultation</h3>
-                <p className="text-sm mb-4 opacity-90">
-                  Get a complimentary 30-minute cloud strategy session
-                </p>
-                <Button variant="secondary" className="w-full">
-                  Book Now
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>

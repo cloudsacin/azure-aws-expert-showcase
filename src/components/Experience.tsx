@@ -57,16 +57,6 @@ const Experience = () => {
       title: "Migration Practice Lead",
       description: "Leading data center and database migration initiatives",
       icon: <TrendingUp className="w-5 h-5" />
-    },
-    {
-      title: "Microsoft Certified Trainer",
-      description: "Authorized to deliver Microsoft official training",
-      icon: <Award className="w-5 h-5" />
-    },
-    {
-      title: "Enterprise Solutions",
-      description: "Designed solutions for Fortune 500 companies",
-      icon: <Users className="w-5 h-5" />
     }
   ];
 
@@ -79,27 +69,23 @@ const Experience = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             4+ years of progressive growth in cloud architecture, from Associate Engineer to Senior Architect, 
-            consistently delivering value and innovation in cloud solutions.
+            specializing in cloud migration, cost optimization, and enterprise solutions.
           </p>
         </div>
 
         {/* Key Achievements */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {achievements.map((achievement, index) => (
-            <Card 
-              key={achievement.title}
-              className="text-center shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in"
-              style={{animationDelay: `${index * 0.2}s`}}
-            >
-              <CardContent className="pt-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 text-primary rounded-full mb-4">
-                  {achievement.icon}
-                </div>
-                <h3 className="font-bold text-lg text-foreground mb-2">{achievement.title}</h3>
-                <p className="text-muted-foreground">{achievement.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="flex justify-center mb-16">
+          <Card 
+            className="text-center shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105 animate-fade-in max-w-md"
+          >
+            <CardContent className="pt-6">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 text-primary rounded-full mb-4">
+                <TrendingUp className="w-5 h-5" />
+              </div>
+              <h3 className="font-bold text-lg text-foreground mb-2">Migration Practice Lead</h3>
+              <p className="text-muted-foreground">Leading data center and database migration initiatives</p>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Experience Timeline */}
@@ -154,7 +140,7 @@ const Experience = () => {
             <div className="text-muted-foreground">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">10+</div>
+            <div className="text-3xl font-bold text-primary mb-2">20+</div>
             <div className="text-muted-foreground">Certifications</div>
           </div>
           <div className="text-center">
