@@ -78,7 +78,7 @@ const Skills = () => {
 
   const specializations = [
     "BCDR (Business Continuity & Disaster Recovery)",
-    "DPI (Data Protection & Information)",
+    "DPI (Data Platform Implementation)",
     "Azure Virtual Desktop (AVS)",
     "Oracle Cloud Infrastructure (OCI)",
     "Open AI Integration",
