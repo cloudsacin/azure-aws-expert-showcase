@@ -5,10 +5,20 @@ import { MapPin, Mail, Linkedin, ExternalLink } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
-      {/* Background decoration */}
+      {/* Enhanced background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary-glow/10"></div>
-      <div className="absolute top-20 left-10 w-32 h-32 bg-primary-glow/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 left-10 w-32 h-32 bg-primary-glow/20 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+      <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-primary-glow/15 rounded-full blur-2xl animate-float" style={{animationDelay: '4s'}}></div>
+      
+      {/* Animated grid pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px',
+          animation: 'shimmer 10s linear infinite'
+        }}></div>
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -90,13 +100,18 @@ const Hero = () => {
             
             {/* Right Content - Photo */}
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-              <div className="relative animate-fade-in" style={{animationDelay: '0.5s'}}>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary-glow/20 rounded-2xl blur-2xl"></div>
+              <div className="relative animate-fade-in group" style={{animationDelay: '0.5s'}}>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-primary-glow/30 rounded-3xl blur-3xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-glass rounded-3xl"></div>
                 <img 
-                  src="/lovable-uploads/f5e42478-9ab7-4cb1-9f27-62cfcec29be5.png" 
+                  src="/lovable-uploads/17b534f1-df65-44e7-a0aa-b1c3cfeac7ab.png" 
                   alt="Sachin Kumar Jha - Senior Cloud Architect"
-                  className="relative w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border-4 border-white/20"
+                  className="relative w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-3xl shadow-float border border-white/30 group-hover:scale-105 transition-all duration-700 backdrop-blur-sm"
                 />
+                
+                {/* Floating elements around photo */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/30 rounded-full blur-sm animate-float"></div>
+                <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-primary-glow/20 rounded-full blur-md animate-float" style={{animationDelay: '1s'}}></div>
               </div>
             </div>
           </div>
