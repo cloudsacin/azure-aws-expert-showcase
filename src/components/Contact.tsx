@@ -1,55 +1,31 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Mail, 
-  Linkedin, 
-  MapPin, 
-  Phone, 
-  Calendar, 
-  ExternalLink,
-  MessageSquare,
-  Briefcase,
-  Clock,
-  CheckCircle
-} from "lucide-react";
-
+import { Mail, Linkedin, MapPin, Phone, Calendar, ExternalLink, MessageSquare, Briefcase, Clock, CheckCircle } from "lucide-react";
 const Contact = () => {
-  const contactMethods = [
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      value: "sachin.jha@celebaltech.com",
-      description: "Best for detailed project discussions",
-      action: "Send Email",
-      primary: true
-    },
-    {
-      icon: <Linkedin className="w-6 h-6" />,
-      title: "LinkedIn",
-      value: "linkedin.com/in/sachin-kumar-jha-746005161",
-      description: "Professional networking and updates",
-      action: "Connect on LinkedIn",
-      primary: false
-    }
-  ];
-
+  const contactMethods = [{
+    icon: <Mail className="w-6 h-6" />,
+    title: "Email",
+    value: "sachin.jha@celebaltech.com",
+    description: "Best for detailed project discussions",
+    action: "Send Email",
+    primary: true
+  }, {
+    icon: <Linkedin className="w-6 h-6" />,
+    title: "LinkedIn",
+    value: "linkedin.com/in/sachin-kumar-jha-746005161",
+    description: "Professional networking and updates",
+    action: "Connect on LinkedIn",
+    primary: false
+  }];
   const availabilityStatus = {
     available: true,
     nextAvailable: "Today",
     responseTime: "Within 24 hours",
     timezone: "CST (Houston, TX)"
   };
-
-  const projectTypes = [
-    "Cloud Migration Strategy",
-    "Architecture Review",
-    "Cost Optimization",
-    "Security Assessment"
-  ];
-
-  return (
-    <section className="py-20 bg-background">
+  const projectTypes = ["Cloud Migration Strategy", "Architecture Review", "Cost Optimization", "Security Assessment"];
+  return <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -89,14 +65,9 @@ const Contact = () => {
 
             {/* Contact Methods */}
             <div className="space-y-4">
-              {contactMethods.map((method, index) => (
-                <Card 
-                  key={method.title}
-                  className={`shadow-card hover:shadow-elegant transition-all duration-300 animate-fade-in ${
-                    method.primary ? 'ring-2 ring-primary/20 bg-accent/30' : ''
-                  }`}
-                  style={{animationDelay: `${0.1 + index * 0.1}s`}}
-                >
+              {contactMethods.map((method, index) => <Card key={method.title} className={`shadow-card hover:shadow-elegant transition-all duration-300 animate-fade-in ${method.primary ? 'ring-2 ring-primary/20 bg-accent/30' : ''}`} style={{
+              animationDelay: `${0.1 + index * 0.1}s`
+            }}>
                   <CardContent className="pt-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
@@ -109,28 +80,25 @@ const Contact = () => {
                           <div className="text-sm text-muted-foreground mt-1">{method.description}</div>
                         </div>
                       </div>
-                      <Button 
-                        variant={method.primary ? "default" : "outline"}
-                        className={method.primary ? "shadow-elegant hover:shadow-glow" : ""}
-                        onClick={() => {
-                          if (method.title === "Email") {
-                            window.location.href = 'mailto:sachin.jha@celebaltech.com';
-                          } else if (method.title === "LinkedIn") {
-                            window.open('https://www.linkedin.com/in/sachin-kumar-jha-746005161/', '_blank');
-                          }
-                        }}
-                      >
+                      <Button variant={method.primary ? "default" : "outline"} className={method.primary ? "shadow-elegant hover:shadow-glow" : ""} onClick={() => {
+                    if (method.title === "Email") {
+                      window.location.href = 'mailto:sachin.jha@celebaltech.com';
+                    } else if (method.title === "LinkedIn") {
+                      window.open('https://www.linkedin.com/in/sachin-kumar-jha-746005161/', '_blank');
+                    }
+                  }}>
                         {method.action}
                         <ExternalLink className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
 
             {/* Location & Company */}
-            <Card className="shadow-card animate-fade-in" style={{animationDelay: '0.4s'}}>
+            <Card className="shadow-card animate-fade-in" style={{
+            animationDelay: '0.4s'
+          }}>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Briefcase className="w-5 h-5 text-primary" />
@@ -151,12 +119,7 @@ const Contact = () => {
                     <div>
                       <div className="font-medium text-foreground">Company</div>
                       <div className="text-sm text-muted-foreground">
-                        <a 
-                          href="https://celebaltech.com" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-primary hover:text-primary/80 transition-colors"
-                        >
+                        <a href="https://celebaltech.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
                           Celebal Technologies
                         </a>
                       </div>
@@ -170,7 +133,9 @@ const Contact = () => {
           {/* Project Types & Quick Info */}
           <div className="space-y-6">
             {/* Project Types */}
-            <Card className="shadow-card animate-fade-in" style={{animationDelay: '0.2s'}}>
+            <Card className="shadow-card animate-fade-in" style={{
+            animationDelay: '0.2s'
+          }}>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MessageSquare className="w-5 h-5 text-primary" />
@@ -178,17 +143,17 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                {projectTypes.map((type, index) => (
-                  <div key={type} className="flex items-center gap-2">
+                {projectTypes.map((type, index) => <div key={type} className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-600" />
                     <span className="text-sm text-foreground">{type}</span>
-                  </div>
-                ))}
+                  </div>)}
               </CardContent>
             </Card>
 
             {/* Quick Stats */}
-            <Card className="shadow-card animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <Card className="shadow-card animate-fade-in" style={{
+            animationDelay: '0.3s'
+          }}>
               <CardHeader>
                 <CardTitle>Why Choose Me?</CardTitle>
               </CardHeader>
@@ -208,7 +173,7 @@ const Contact = () => {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-muted-foreground">Success Rate</span>
-                    <span className="font-semibold text-foreground">98%</span>
+                    <span className="font-semibold text-foreground">90%</span>
                   </div>
                 </div>
               </CardContent>
@@ -217,8 +182,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
