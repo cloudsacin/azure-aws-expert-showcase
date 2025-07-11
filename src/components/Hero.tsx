@@ -50,7 +50,16 @@ const Hero = () => {
                   Houston, Texas
                 </div>
                 <div className="hidden md:block w-1 h-1 bg-white/50 rounded-full"></div>
-                <div>Celebal Technologies</div>
+                <div>
+                  <a 
+                    href="https://celebaltech.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-primary-glow transition-colors duration-300"
+                  >
+                    Celebal Technologies
+                  </a>
+                </div>
               </div>
               
               {/* Certification Highlights */}
