@@ -4,7 +4,7 @@ import { MapPin, Mail, Linkedin, ExternalLink } from "lucide-react";
 
 // Get base path for GitHub Pages
 const getBasePath = () => {
-  return window.location.hostname === 'localhost' ? '' : '/azure-aws-expert-showcase';
+  return window.location.hostname === 'localhost' ? '' : '/portfolio';
 };
 
 const Hero = () => {

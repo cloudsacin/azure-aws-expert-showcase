@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 
 // Get base path for GitHub Pages
 const getBasename = () => {
-  return window.location.hostname === 'localhost' ? '/' : '/azure-aws-expert-showcase';
+  return window.location.hostname === 'localhost' ? '/' : '/portfolio';
 };
 
 const App = () => (
