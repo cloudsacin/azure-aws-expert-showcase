@@ -113,7 +113,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-primary-glow/30 rounded-3xl blur-3xl group-hover:blur-2xl transition-all duration-500"></div>
                 <div className="absolute inset-0 bg-gradient-glass rounded-3xl"></div>
                 <img 
-                  src="/lovable-uploads/17b534f1-df65-44e7-a0aa-b1c3cfeac7ab.png" 
+                  src={`${window.location.hostname === 'localhost' ? '' : '/azure-aws-expert-showcase'}/lovable-uploads/17b534f1-df65-44e7-a0aa-b1c3cfeac7ab.png`}
                   alt="Sachin Kumar Jha - Senior Cloud Architect"
                   className="relative w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-3xl shadow-float border border-white/30 group-hover:scale-105 transition-all duration-700 backdrop-blur-sm"
                 />
